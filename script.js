@@ -60,15 +60,29 @@ function makeChoice(choice) {
     const choicesDiv = document.getElementById("choices");
     choicesDiv.innerHTML = "";
 
-    for (const key in scene.choices) {
-        const btn = document.createElement("button");
-        btn.innerText = scene.choices[key];
-        btn.onclick = () => {
-            playSound();
-            makeChoice(scene.next[key]);
-        };
-        choicesDiv.appendChild(btn);
+    // If there are choices, display buttons
+    if (Object.keys(scene.choices).length > 0) {
+        for (const key in scene.choices) {
+            const btn = document.createElement("button");
+            btn.innerText = scene.choices[key];
+            btn.onclick = () => {
+                playSound();
+                makeChoice(scene.next[key]);
+            };
+            choicesDiv.appendChild(btn);
+        }
+    } else {
+        // If it's an ending scene, show restart button
+        const restartBtn = document.createElement("button");
+        restartBtn.innerText = "Restart 🔄";
+        restartBtn.onclick = () => restartGame();
+        choicesDiv.appendChild(restartBtn);
     }
+}
+
+function restartGame() {
+    localStorage.removeItem("currentScene"); // Clear saved progress
+    makeChoice(1); // Restart from the first scene
 }
 
 // Load saved state when page loads
@@ -76,5 +90,8 @@ window.onload = () => {
     const savedScene = localStorage.getItem("currentScene");
     if (savedScene) {
         makeChoice(savedScene);
+    } else {
+        makeChoice(1);
     }
 };
+
