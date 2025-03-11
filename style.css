@@ -1,38 +1,30 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    font-family: monospace;
+    background-color: black;
+    color: green;
     text-align: center;
 }
 
-header {
-    background: #007bff;
-    color: white;
-    padding: 20px;
+pre {
+    font-size: 16px;
+    line-height: 1.2;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+#text {
+    margin-top: 20px;
+    font-size: 18px;
 }
 
-nav ul li {
-    display: inline;
+button {
     margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    border: none;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: #007bff;
-    font-weight: bold;
-}
-
-section {
-    padding: 20px;
-}
-
-footer {
-    background: #f8f8f8;
-    padding: 10px;
-    font-size: 14px;
+button:hover {
+    background-color: darkgreen;
 }
