@@ -1,6 +1,14 @@
 const scenes = {
     1: {
         text: "You entered a dark forest. There's a path ahead and an old bridge. Where do you go?",
+        ascii: `
+         🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲
+         🌲        |        🌲
+         🌲    --/ \--    🌲
+         🌲   /     \   🌲
+         🌲  /       \  🌲
+         🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲
+        `,
         choices: {
             1: "Follow the path 🌿",
             2: "Cross the bridge 🌉"
@@ -12,6 +20,13 @@ const scenes = {
     },
     2: {
         text: "You descended into a dungeon. There are two doors. Which one do you choose?",
+        ascii: `
+         🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰
+         🏰        |        🏰
+         🏰   [  🚪  🚪  ]   🏰
+         🏰      DUNGEON      🏰
+         🏰__________________🏰
+        `,
         choices: {
             1: "Left door 🚪",
             2: "Right door 🚪"
@@ -21,10 +36,10 @@ const scenes = {
             2: 6
         }
     },
-    3: { text: "You found a chest full of gold! 🏆", choices: {}, next: {} },
-    4: { text: "The bridge collapsed, and you fell into the river... 🌊", choices: {}, next: {} },
-    5: { text: "You found a powerful sword! ⚔", choices: {}, next: {} },
-    6: { text: "A monster was waiting for you... 🐉", choices: {}, next: {} }
+    3: { text: "You found a chest full of gold! 🏆", ascii: "💰💰💰💰💰💰💰", choices: {}, next: {} },
+    4: { text: "The bridge collapsed, and you fell into the river... 🌊", ascii: "~~~~ 🌊🌊🌊 ~~~~", choices: {}, next: {} },
+    5: { text: "You found a powerful sword! ⚔", ascii: "  /\   ⚔   /\  ", choices: {}, next: {} },
+    6: { text: "A monster was waiting for you... 🐉", ascii: "  (🦖) RAAAH!", choices: {}, next: {} }
 };
 
 function playSound() {
@@ -37,6 +52,7 @@ function playSound() {
 function makeChoice(choice) {
     const scene = scenes[choice];
     document.getElementById("text").innerText = scene.text;
+    document.getElementById("ascii-art").innerText = scene.ascii || "";
 
     // Save current game state
     localStorage.setItem("currentScene", choice);
