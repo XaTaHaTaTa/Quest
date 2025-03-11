@@ -102,33 +102,55 @@ function playSound() {
 }
 
 function makeChoice(choice) {
-    document.getElementById("loading").style.display = "none"; // Hide loading text
     const scene = scenes[choice];
+    
+    // Update text and ASCII art
     document.getElementById("text").innerText = scene.text;
     document.getElementById("ascii-art").innerText = scene.ascii || "";
 
+    // Save current game state
     localStorage.setItem("currentScene", choice);
 
+    // Clear previous choices
     const choicesDiv = document.getElementById("choices");
     choicesDiv.innerHTML = "";
 
+    // Generate new choice buttons
     if (Object.keys(scene.choices).length > 0) {
         for (const key in scene.choices) {
             const btn = document.createElement("button");
             btn.innerText = scene.choices[key];
-            btn.onclick = () => {
+            btn.onclick = function () {
                 playSound();
                 makeChoice(scene.next[key]);
             };
             choicesDiv.appendChild(btn);
         }
     } else {
+        // If no choices available, show Restart button
         const restartBtn = document.createElement("button");
-        restartBtn.innerText = "Restart!";
+        restartBtn.innerText = "Restart 🔄";
         restartBtn.onclick = () => restartGame();
         choicesDiv.appendChild(restartBtn);
     }
 }
+
+// Restart function to reset the game
+function restartGame() {
+    localStorage.removeItem("currentScene");
+    makeChoice(1);
+}
+
+// Ensure the game starts from the saved state or scene 1
+document.addEventListener("DOMContentLoaded", () => {
+    const savedScene = localStorage.getItem("currentScene");
+    if (savedScene) {
+        makeChoice(savedScene);
+    } else {
+        makeChoice(1);
+    }
+});
+
 
 
 function restartGame() {
