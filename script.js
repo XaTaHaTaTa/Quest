@@ -80,18 +80,18 @@ const scenes = {
                                      
         `,
         choices: {
-            1: "Left door 🚪",
-            2: "Right door 🚪"
+            1: "Left door ",
+            2: "Right door "
         },
         next: {
             1: 5,
             2: 6
         }
     },
-    3: { text: "You found a chest full of gold! 🏆", ascii: "💰💰💰💰💰💰💰", choices: {}, next: {} },
-    4: { text: "The bridge collapsed, and you fell into the river... 🌊", ascii: "~~~~ 🌊🌊🌊 ~~~~", choices: {}, next: {} },
-    5: { text: "You found a powerful sword! ⚔", ascii: "  /\   ⚔   /\  ", choices: {}, next: {} },
-    6: { text: "A monster was waiting for you... 🐉", ascii: "  (🦖) RAAAH!", choices: {}, next: {} }
+    3: { text: "You found a chest full of gold! $$$", ascii: "", choices: {}, next: {} },
+    4: { text: "The bridge collapsed, and you fell into the river... ", ascii: "~~~~0~~ 0~~~~", choices: {}, next: {} },
+    5: { text: "You found a powerful sword! ", ascii: "  /\  /\  /\  ", choices: {}, next: {} },
+    6: { text: "A monster was waiting for you... ", ascii: " OM NOM NOM NOM", choices: {}, next: {} }
 };
 
 function playSound() {
@@ -124,7 +124,7 @@ function makeChoice(choice) {
         }
     } else {
         const restartBtn = document.createElement("button");
-        restartBtn.innerText = "Restart 🔄";
+        restartBtn.innerText = "Restart!";
         restartBtn.onclick = () => restartGame();
         choicesDiv.appendChild(restartBtn);
     }
