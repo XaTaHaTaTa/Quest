@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,19 +7,21 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <pre id="ascii-art">
+    <div id="game-container">
+        <pre id="ascii-art">
        ___                     _            
       / _ \  _ __  _   _  ___ | |_ ___ _ __ 
      | | | || '_ \| | | |/ _ \| __/ _ \ '__|
      | |_| || | | | |_| | (_) | ||  __/ |   
       \___/ |_| |_|\__,_|\___/ \__\___|_|   
-    </pre>
+        </pre>
 
-    <div id="text">Welcome to Text_Quest, where do you want to go?</div>
+        <div id="text">Welcome to the adventure! Where do you want to go?</div>
 
-    <div id="choices">
-        <button onclick="makeChoice(1)">Enter the forest🌲</button>
-        <button onclick="makeChoice(2)">Enter the castle🏰</button>
+        <div id="choices">
+            <button onclick="makeChoice(1)">Enter the forest 🌲</button>
+            <button onclick="makeChoice(2)">Descend into the dungeon 🏰</button>
+        </div>
     </div>
 
     <script src="script.js"></script>
