@@ -138,12 +138,13 @@ function restartGame() {
 }
 
 // Load saved state when page loads
-window.onload = () => {
+document.addEventListener("DOMContentLoaded", () => {
     const savedScene = localStorage.getItem("currentScene");
     if (savedScene) {
         makeChoice(savedScene);
     } else {
         makeChoice(1);
     }
-};
+});
+
 
