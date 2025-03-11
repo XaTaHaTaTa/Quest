@@ -91,7 +91,24 @@ const scenes = {
     3: { text: "You found a chest full of gold! $$$", ascii: "", choices: {}, next: {} },
     4: { text: "The bridge collapsed, and you fell into the river... ", ascii: "~~~~0~~ 0~~~~", choices: {}, next: {} },
     5: { text: "You found a powerful sword! ", ascii: "  /\  /\  /\  ", choices: {}, next: {} },
-    6: { text: "A monster was waiting for you... ", ascii: " OM NOM NOM NOM", choices: {}, next: {} }
+    6: { text: "A monster was waiting for you... ", ascii: "                         
+        ┌┐   ┌┐         
+   ▲    ││   ││     ▲   
+   │    /\───/\     │   
+   │   (=======)    │   
+   │  ( 0 * * 0 )   │   
+   │   ( ▼▲▼▲▼ )    │   
+   @──┌┬───────┬┐───@   
+   └───(       )────┘   
+   │   (==[=]==)    │   
+   │   (       )    │   
+   │    ───────     │   
+        ││   ││         
+        ││   ││         
+        ││   ││         
+       ┌──┐ ┌──┐        
+       └──┘ └──┘        
+                        ", choices: {}, next: {} }
 };
 
 function playSound() {
