@@ -102,17 +102,16 @@ function playSound() {
 }
 
 function makeChoice(choice) {
+    document.getElementById("loading").style.display = "none"; // Hide loading text
     const scene = scenes[choice];
     document.getElementById("text").innerText = scene.text;
     document.getElementById("ascii-art").innerText = scene.ascii || "";
 
-    // Save current game state
     localStorage.setItem("currentScene", choice);
 
     const choicesDiv = document.getElementById("choices");
     choicesDiv.innerHTML = "";
 
-    // If there are choices, display buttons
     if (Object.keys(scene.choices).length > 0) {
         for (const key in scene.choices) {
             const btn = document.createElement("button");
@@ -124,13 +123,13 @@ function makeChoice(choice) {
             choicesDiv.appendChild(btn);
         }
     } else {
-        // If it's an ending scene, show restart button
         const restartBtn = document.createElement("button");
         restartBtn.innerText = "Restart 🔄";
         restartBtn.onclick = () => restartGame();
         choicesDiv.appendChild(restartBtn);
     }
 }
+
 
 function restartGame() {
     localStorage.removeItem("currentScene"); // Clear saved progress
