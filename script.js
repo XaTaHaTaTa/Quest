@@ -1,15 +1,14 @@
 const scenes = {
     "start": {
         text: "Welcome to the adventure! Where do you want to go?",
-        ascii: `
-            🏰      🌲🌲🌲🌲🌲      🏰
-            🏰      | Start |      🏰
-            🏰      [ 1  2 ]      🏰
-            🏰____________________🏰
+        ascii: `      
+                  | Start |      
+                  [ 1  2  ]      
+
         `,
         choices: {
-            1: "Enter the forest 🌲",
-            2: "Descend into the dungeon 🏰"
+            1: "Enter the forest ",
+            2: "Descend into the dungeon "
         },
         next: {
             1: "1", // Start forest scene
@@ -43,18 +42,12 @@ const scenes = {
               T T          
                            
         `,
-        choices: { 1: "Follow the path 🌿", 2: "Cross the bridge 🌉" },
+        choices: { 1: "Follow the path ", 2: "Cross the bridge " },
         next: { 1: "3", 2: "4" }
     },
     "2": {
         text: "You see a giant tower. There are two ways continue your path: cliumb inside a window via vine or go around the tower. Which one do you choose?",
-        ascii: `
-                                            
-                  C                 
-                  C                 
-                CCCCC               
-                  C                 
-                  C                 
+        ascii: `            
                  rRr                
                 RrRRR               
                 RRRrr               
@@ -108,9 +101,30 @@ const scenes = {
        $$$$          
           $$$$$$$    
                      `, choices: {}, next: {} },
-    "4": { text: "The bridge collapsed, and you fell into the river... 🌊", ascii: "~~~~ 🌊🌊🌊 ~~~~", choices: {}, next: {} },
-    "5": { text: "You found a powerful sword! ⚔", ascii: "  /\\   ⚔   /\\  ", choices: {}, next: {} },
-    "6": { text: "A monster was waiting for you... 🐉", ascii: "  (🦖) RAAAH!", choices: {}, next: {} }
+    "4": { text: "The bridge collapsed, and you fell into the river... ", ascii: "~W~W~W~W~", choices: {}, next: {} },
+    "5": { text: "You found a powerful sword! ⚔", ascii: `              
+      B       
+      BB      
+      BB      
+      BB      
+      BB      
+      BB      
+      BB      
+      BB      
+      BB      
+      BB      
+      BB      
+      BB      
+  CGCGCGCGCG  
+      HH      
+      HH      
+      HH      
+      HH      
+     PPPP     
+     PPPP     
+      PP      
+              `, choices: {}, next: {} },
+    "6": { text: "A monster was waiting for you... ", ascii: " OM NOM NOM NOM NOM!", choices: {}, next: {} }
 };
 
 function makeChoice(choice) {
@@ -136,7 +150,7 @@ function makeChoice(choice) {
         }
     } else {
         const restartBtn = document.createElement("button");
-        restartBtn.innerText = "Restart 🔄";
+        restartBtn.innerText = "Restart?";
         restartBtn.onclick = () => restartGame();
         choicesDiv.appendChild(restartBtn);
     }
