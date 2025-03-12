@@ -83,7 +83,7 @@ const scenes = {
      ┌┘     VVVVVV VVVV │      
      │ ┬┴─       VVV    │      
      │        VVVV VV   │      
-     └──────────────────┘        
+      └──────────────────┘        
         `,
         choices: { 1: "Go around the tower", 2: "Climb into the window" },
         next: { 1: "5", 2: "6" }
