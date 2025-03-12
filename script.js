@@ -47,18 +47,67 @@ const scenes = {
         next: { 1: "3", 2: "4" }
     },
     "2": {
-        text: "You descended into a dungeon. There are two doors. Which one do you choose?",
+        text: "You see a giant tower. There are two ways continue your path: cliumb inside a window via vine or go around the tower. Which one do you choose?",
         ascii: `
-         🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰
-         🏰        |        🏰
-         🏰   [  🚪  🚪  ]   🏰
-         🏰      DUNGEON      🏰
-         🏰__________________🏰
+                                            
+                  C                 
+                  C                 
+                CCCCC               
+                  C                 
+                  C                 
+                 rRr                
+                RrRRR               
+                RRRrr               
+               RRRRRrR              
+              RrRRRRRRR             
+             RRrRrRRrRRR            
+            RrrRRRRrrRrRR           
+           RRRrRRRRRRrRRrR          
+          RRrRRRrRRRRRRRRRR         
+         RRrRRRRrrRRRRRRrRRR        
+        RRrRrRRRRrRRRRRrrRrRR       
+        ┌─────────┬─────────┐       
+        │    VVVVVV  VV     │       
+        │ ┼─ VVV  VVVV  ─┴  │       
+        │ ├    V    VVVV    │       
+        └┐            VVV   │       
+         │     WWWWWWW  VV │        
+         │    WW  @  WW  V │        
+         │     [ -▼- ]   V │        
+         │  V  [  ▲  ]  VV │        
+        ┌┘ VV  wwwwwww  V  │        
+        │ VV            V  │        
+        │ VVVVV      VVVV  │        
+        │    VVVV    VVV   └┐       
+        └┐      VVVVVV      │       
+         │   V   VV         │       
+         │ VVV    VVV V   ┤ │       
+         │VVV      VVVV  ─┤ │       
+         │VVVVVVV  VV   VV  │       
+         │    VVV VV     V ┌┘       
+        ┌┘     VVVVVV VVVV │        
+        │ ┬┴─       VVV    │        
+        │        VVVV VV   │        
+        └──────────────────┘        
         `,
-        choices: { 1: "Left door 🚪", 2: "Right door 🚪" },
+        choices: { 1: "Go around the tower", 2: "Climb into the window" },
         next: { 1: "5", 2: "6" }
     },
-    "3": { text: "You found a chest full of gold! 🏆", ascii: "💰💰💰💰💰💰💰", choices: {}, next: {} },
+    "3": { text: "You found a chest full of gold!", ascii: `                     
+          $$$$$$$    
+       $$$$          
+      $$             
+      $              
+     $$              
+  $$$$$$$$$$$$$$$$   
+     $               
+  $$$$$$$$$$$$$$$$   
+     $$              
+      $              
+      $$             
+       $$$$          
+          $$$$$$$    
+                     `, choices: {}, next: {} },
     "4": { text: "The bridge collapsed, and you fell into the river... 🌊", ascii: "~~~~ 🌊🌊🌊 ~~~~", choices: {}, next: {} },
     "5": { text: "You found a powerful sword! ⚔", ascii: "  /\\   ⚔   /\\  ", choices: {}, next: {} },
     "6": { text: "A monster was waiting for you... 🐉", ascii: "  (🦖) RAAAH!", choices: {}, next: {} }
