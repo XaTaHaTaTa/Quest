@@ -55,37 +55,37 @@ const scenes = {
         text: "You see a giant tower. There are two ways continue your path: cliumb inside a window via vine or go around the tower. Which one do you choose?",
         ascii: ` 
                          
-         RRRRRrR         
-        RrRRRRRRR        
-       RRrRrRRrRRR       
-      RrrRRRRrrRrRR      
-     RRRrRRRRRRrRRrR     
-    RRrRRRrRRRRRRRRRR    
-   RRrRRRRrrRRRRRRrRRR   
-  RRrRrRRRRrRRRRRrrRrRR  
-  ┌─────────┬─────────┐  
-  │    VVVVVV  VV     │  
-  │ ┼─ VVV  VVVV  ─┴  │  
-  │ ├    V    VVVV    │  
-  └┐            VVV   │  
-   │     WWWWWWW  VV │   
-   │    WW  @  WW  V │   
-   │     [ /▼\ ]   V │   
-   │  V  [  ▲  ]  VV │   
-  ┌┘ VV  wwwwwww  V  │   
-  │ VV            V  │   
-  │ VVVVV      VVVV  │   
-  │    VVVV    VVV   └┐  
-  └┐      VVVVVV      │  
-   │   V   VV         │  
-   │ VVV    VVV V   ┤ │  
-   │VVV      VVVV  ─┤ │  
-   │VVVVVVV  VV   VV  │  
-   │    VVV VV     V ┌┘  
-  ┌┘     VVVVVV VVVV │   
-  │ ┬┴─       VVV    │   
-  │        VVVV VV   │   
-  └──────────────────┘   
+         RRRRRrR        
+        RrRRRRRRR       
+       RRrRrRRrRRR      
+      RrrRRRRrrRrRR     
+     RRRrRRRRRRrRRrR    
+    RRrRRRrRRRRRRRRRR   
+   RRrRRRRrrRRRRRRrRRR  
+  RRrRrRRRRrRRRRRrrRrRR 
+  ┌─────────┬─────────┐ 
+  │    VVVVVV  VV     │ 
+  │ ┼─ VVV  VVVV  ─┴  │ 
+  │ ├    V    VVVV    │ 
+  └┐            VVV   │ 
+   │     WWWWWWW  VV ┌┘ 
+   │    WW  @  WW  V │  
+   │     [ ─▼─ ]   V │  
+   │  V  [  ▲  ]  VV │  
+  ┌┘ VV  wwwwwww  V  │  
+  │ VV            V  │  
+  │ VVVVV      VVVV  │  
+  │    VVVV    VVV   └┐ 
+  └┐      VVVVVV      │ 
+   │   V   VV         │ 
+   │ VVV    VVV V   ┤ │ 
+   │VVV      VVVV  ─┤ │ 
+   │VVVVVVV  VV   VV  │ 
+   │    VVV VV     V ┌┘ 
+  ┌┘     VVVVVV VVVV │  
+  │ ┬┴─       VVV    │  
+  │        VVVV VV   │  
+  └──────────────────┘  
                            
         `,
         choices: { 1: "Go around the tower", 2: "Climb into the window" },
