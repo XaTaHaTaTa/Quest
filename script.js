@@ -103,7 +103,16 @@ const scenes = {
        $$$$          
           $$$$$$$    
                      `, choices: {}, next: {} },
-    "4": { text: "The bridge collapsed, and you fell into the river... ", ascii: "~W~W~W~W~", choices: {}, next: {} },
+    "4": { text: "The bridge collapsed, and you fell into the river... ", ascii: `
+                                  
+           H E L P !          
+                              
+            @                 
+          └─▼─┐               
+    ~www. ~www. ~www. ~www.   
+ ~wwwo~.wwwo~.wwwo~.wwwo~.www 
+                              
+    `, choices: {}, next: {} },
     "5": { text: "You found a powerful sword! ⚔", ascii: `              
       B       
       BB      
