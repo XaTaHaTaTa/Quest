@@ -8,7 +8,7 @@ const scenes = {
         `,
         choices: {
             1: "Enter the forest ",
-            2: "Descend into the dungeon "
+            2: "Go to the tower"
         },
         next: {
             1: "1", // Start forest scene
@@ -42,7 +42,7 @@ const scenes = {
               T T          
                            
         `,
-        choices: { 1: "Follow the path ", 2: "Cross the bridge " },
+        choices: { 1: "Follow the path that goes deeper into the woods", 2: "Cross the old bridge" },
         next: { 1: "3", 2: "4" }
     },
     "2": {
