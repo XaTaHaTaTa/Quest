@@ -129,7 +129,24 @@ const scenes = {
      PPPP     
       PP      
               `, choices: {}, next: {} },
-    "6": { text: "A monster was waiting for you... ", ascii: " OM NOM NOM NOM NOM!", choices: {}, next: {} }
+    "6": { text: "A monster was waiting for you... ", ascii: `                           
+          ┌┐   ┌┐          
+     ▲    ││   ││     ▲    
+     │    {}───{}     │    
+     │   (=======)    │    
+     │  ( 0 * * 0 )   │    
+     │   ( ▼▲▼▲▼ )    │    
+     @──┌┬───────┬┐───@    
+     └───(       )────┘    
+     │   (==[=]==)    │    
+     │   (       )    │    
+     │    ───────     │    
+          ││   ││          
+          ││   ││          
+          ││   ││          
+         ┌──┐ ┌──┐         
+         └──┘ └──┘         
+                           `, choices: {}, next: {} }
 };
 
 function makeChoice(choice) {
