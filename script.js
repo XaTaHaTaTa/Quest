@@ -2,8 +2,8 @@ const scenes = {
     "start": {
         text: "Welcome to the adventure! Where do you want to go?",
         ascii: `      
-                  | Start |      
-                  [ 1  2  ]      
+        | Start |      
+        [ 1  2  ]      
 
         `,
         choices: {
