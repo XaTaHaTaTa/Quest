@@ -19,12 +19,29 @@ const scenes = {
     "1": {
         text: "You entered a dark forest. There's a path ahead and an old bridge. Where do you go?",
         ascii: `
-         🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲
-         🌲        |        🌲
-         🌲    --/ \\--    🌲
-         🌲   /     \\   🌲
-         🌲  /       \\  🌲
-         🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲
+         L L               
+       LLLLLLL  L LL       
+         LLALL LLLLALL     
+     LLLL LLL LLLL LL      
+    LLALLL LLLLLL          
+     L LLLLLLLLL           
+          LLALLL LL    L   
+    L LL LLLLLLLLLLLLLLLL  
+    LLALLLLLLLLALLLLLALL   
+   LLLLL   LLLLLLL  LLL    
+          LLLLLLLLL        
+   LL LL LLLLL│LLL  LLL    
+  LLLLLLLLLL││TLLLLLLLLLL  
+   L LALLLLLL│││LLLLALLLL  
+      LL LLT│││LLL LL L    
+         LL│││T│LL         
+           T││││           
+           ││││T           
+           │T│││TT         
+         TTT  TT TTT       
+        TT   TT            
+              T T          
+                           
         `,
         choices: { 1: "Follow the path 🌿", 2: "Cross the bridge 🌉" },
         next: { 1: "3", 2: "4" }
