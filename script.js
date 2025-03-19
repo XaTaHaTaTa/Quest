@@ -153,6 +153,17 @@ const scenes = {
          ┌──┐ ┌──┐         
          └──┘ └──┘         
                            `, choices: {}, next: {} }
+},
+"7": {text: "Please login:", ascii:`
+                                            
+ LL         OOOOOOO  GGGGGGG  II  NN     NN 
+ LL         OOOOOOO  GGGGGGG  II  NNNN   NN 
+ LL         OO   OO  GG       II  NNNNN  NN 
+ LL         OO   OO  GG GGGG  II  NN NNN NN 
+ LL         OO   OO  GG GGGG  II  NN  NNNNN 
+ LL     LL  OO   OO  GG   GG  II  NN   NNNN 
+ LLLLLLLLL  OOOOOOO  GGGGGGG  II  NN    NNN 
+ LLLLLLLLL  OOOOOOO  GGGGGGG  II  NN     NN `, choices: {}, next {} }
 };
 
 function makeChoice(choice) {
