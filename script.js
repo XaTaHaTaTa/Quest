@@ -213,3 +213,19 @@ function loadGame() {
 
 // Ensure game starts only after page is fully loaded
 document.addEventListener("DOMContentLoaded", loadGame);
+
+
+const themes = ["theme-green", "theme-orange", "theme-blue"];
+let currentThemeIndex = 0;
+
+document.getElementById("theme-toggle").addEventListener("click", () => {
+    const container = document.getElementById("game-container");
+
+    // Remove all theme classes
+    themes.forEach(t => container.classList.remove(t));
+
+    // Update to next theme
+    currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+    container.classList.add(themes[currentThemeIndex]);
+});
+
