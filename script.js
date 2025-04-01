@@ -203,14 +203,11 @@ function loadGame() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    loadGame();
-
-    // Theme switching logic
-    const themes = ["theme-green", "theme-orange", "theme-blue"];
-    let currentThemeIndex = 0;
-
     const container = document.getElementById("game-container");
     const themeBtn = document.getElementById("theme-toggle");
+
+    const themes = ["theme-green", "theme-orange", "theme-blue"];
+    let currentThemeIndex = 0;
 
     themeBtn.addEventListener("click", () => {
         themes.forEach(t => container.classList.remove(t));
