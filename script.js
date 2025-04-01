@@ -10,15 +10,14 @@ const scenes = {
   >=> >> >=>  >=>     >=> >=>       >=>    >=>      >=>        
     >= >>=>     >====>    >=======>   >=>>=>        >=>     >=>
          >>                                                    
-
 `,
         choices: {
             1: "Enter the forest ",
             2: "Go to the tower"
         },
         next: {
-            1: "1", // Start forest scene
-            2: "2"  // Start dungeon scene
+            1: "1",
+            2: "2"
         }
     },
     "1": {
@@ -46,7 +45,6 @@ const scenes = {
          TTT  TT TTT       
         TT   TT            
               T T          
-                           
         `,
         choices: { 1: "Follow the path that goes deeper into the woods", 2: "Cross the old bridge" },
         next: { 1: "3", 2: "4" }
@@ -54,8 +52,6 @@ const scenes = {
     "2": {
         text: "You see a giant tower. There are two ways continue your path: cliumb inside a window via vine or go around the tower. Which one do you choose?",
         ascii: ` 
-                         
-                                     
             RRRRRrR            
            RrRRRRRRR           
           RRrRrRRrRRR          
@@ -88,7 +84,9 @@ const scenes = {
         choices: { 1: "Go around the tower", 2: "Climb into the window" },
         next: { 1: "5", 2: "6" }
     },
-    "3": { text: "You found a chest full of gold!", ascii: `                     
+    "3": {
+        text: "You found a chest full of gold!",
+        ascii: `                     
           $$$$$$$    
        $$$$          
       $$             
@@ -102,18 +100,21 @@ const scenes = {
       $$             
        $$$$          
           $$$$$$$    
-                     `, choices: {}, next: {} },
-    "4": { text: "The bridge collapsed, and you fell into the river... ", ascii: `
-                                  
+        `, choices: {}, next: {}
+    },
+    "4": {
+        text: "The bridge collapsed, and you fell into the river... ",
+        ascii: `
            H E L P !          
-                              
             @                 
           └─▼─┐               
     ~www. ~www. ~www. ~www.   
  ~wwwo~.wwwo~.wwwo~.wwwo~.www 
-                              
-    `, choices: {}, next: {} },
-    "5": { text: "You found a powerful sword! ⚔", ascii: `              
+        `, choices: {}, next: {}
+    },
+    "5": {
+        text: "You found a powerful sword! ⚔",
+        ascii: `              
       B       
       BB      
       BB      
@@ -134,8 +135,11 @@ const scenes = {
      PPPP     
      PPPP     
       PP      
-              `, choices: {}, next: {} },
-    "6": { text: "A monster was waiting for you... ", ascii: `                           
+        `, choices: {}, next: {}
+    },
+    "6": {
+        text: "A monster was waiting for you... ",
+        ascii: `                           
           ┌┐   ┌┐          
      ▲    ││   ││     ▲    
      │    {}───{}     │    
@@ -152,18 +156,8 @@ const scenes = {
           ││   ││          
          ┌──┐ ┌──┐         
          └──┘ └──┘         
-                           `, choices: {}, next: {} }
-},
-"7": {text: "Please login:", ascii:`
-                                            
- LL         OOOOOOO  GGGGGGG  II  NN     NN 
- LL         OOOOOOO  GGGGGGG  II  NNNN   NN 
- LL         OO   OO  GG       II  NNNNN  NN 
- LL         OO   OO  GG GGGG  II  NN NNN NN 
- LL         OO   OO  GG GGGG  II  NN  NNNNN 
- LL     LL  OO   OO  GG   GG  II  NN   NNNN 
- LLLLLLLLL  OOOOOOO  GGGGGGG  II  NN    NNN 
- LLLLLLLLL  OOOOOOO  GGGGGGG  II  NN     NN `, choices: {}, next {} }
+        `, choices: {}, next: {}
+    }
 };
 
 function makeChoice(choice) {
@@ -172,7 +166,6 @@ function makeChoice(choice) {
     document.getElementById("text").innerText = scene.text;
     document.getElementById("ascii-art").innerText = scene.ascii || "";
 
-    // Save current game state
     localStorage.setItem("currentScene", choice);
 
     const choicesDiv = document.getElementById("choices");
@@ -195,37 +188,33 @@ function makeChoice(choice) {
     }
 }
 
-// Restart function
 function restartGame() {
     localStorage.removeItem("currentScene");
     loadGame();
 }
 
-// Load saved state or start with the initial scene
 function loadGame() {
     const savedScene = localStorage.getItem("currentScene");
     if (savedScene && scenes[savedScene]) {
         makeChoice(savedScene);
     } else {
-        makeChoice("start"); // Show starting scene (forest or dungeon choice)
+        makeChoice("start");
     }
 }
 
-// Ensure game starts only after page is fully loaded
-document.addEventListener("DOMContentLoaded", loadGame);
+document.addEventListener("DOMContentLoaded", () => {
+    loadGame();
 
+    // Theme switching logic
+    const themes = ["theme-green", "theme-orange", "theme-blue"];
+    let currentThemeIndex = 0;
 
-const themes = ["theme-green", "theme-orange", "theme-blue"];
-let currentThemeIndex = 0;
-
-document.getElementById("theme-toggle").addEventListener("click", () => {
     const container = document.getElementById("game-container");
+    const themeBtn = document.getElementById("theme-toggle");
 
-    // Remove all theme classes
-    themes.forEach(t => container.classList.remove(t));
-
-    // Update to next theme
-    currentThemeIndex = (currentThemeIndex + 1) % themes.length;
-    container.classList.add(themes[currentThemeIndex]);
+    themeBtn.addEventListener("click", () => {
+        themes.forEach(t => container.classList.remove(t));
+        currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+        container.classList.add(themes[currentThemeIndex]);
+    });
 });
-
