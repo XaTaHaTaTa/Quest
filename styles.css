@@ -33,7 +33,6 @@ body {
 }
 
 /* Buttons */
-/* Ensure buttons use an ASCII-style font */
 button {
     display: block;
     margin: 10px auto;
@@ -44,9 +43,14 @@ button {
     color: white;
     border: none;
     border-radius: 5px;
-    font-family: 'Courier New', Courier, monospace; /* Monospace ASCII-like font */
-    letter-spacing: 2px; /* Makes text look more spaced out */
-    text-transform: uppercase; /* Optional: Makes it look more retro */
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Hover effect */
+button:hover {
+    background-color: darkgreen;
 }
 
 /* Additional themes */
@@ -75,10 +79,3 @@ button {
     color: inherit;
     border-color: inherit;
 }
-
-
-/* Hover effect */
-button:hover {
-    background-color: darkgreen;
-}
-
