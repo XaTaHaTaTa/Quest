@@ -49,6 +49,34 @@ button {
     text-transform: uppercase; /* Optional: Makes it look more retro */
 }
 
+/* Additional themes */
+.theme-green {
+    background-color: black;
+    color: green;
+    border-color: green;
+}
+
+.theme-orange {
+    background-color: #1a1a1a;
+    color: orange;
+    border-color: orange;
+}
+
+.theme-blue {
+    background-color: white;
+    color: navy;
+    border-color: navy;
+}
+
+#game-container.theme-green,
+#game-container.theme-orange,
+#game-container.theme-blue {
+    background-color: inherit;
+    color: inherit;
+    border-color: inherit;
+}
+
+
 /* Hover effect */
 button:hover {
     background-color: darkgreen;
