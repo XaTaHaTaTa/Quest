@@ -95,9 +95,51 @@ const scenes = {
       $$             
        $$$$          
           $$$$$$$ `, choices: {}, next: {} },
-    "4": { text: "The bridge collapsed, and you fell into the river... ", ascii: `RIVER ASCII`, choices: {}, next: {} },
-    "5": { text: "You found a powerful sword! ⚔", ascii: `SWORD ASCII`, choices: {}, next: {} },
-    "6": { text: "A monster was waiting for you... ", ascii: `MONSTER ASCII`, choices: {}, next: {} }
+    "4": { text: "The bridge collapsed, and you fell into the river... ", ascii: `
+
+           H E L P !          
+            @                 
+          └─▼─┐               
+    ~www. ~www. ~www. ~www.   
+ ~wwwo~.wwwo~.wwwo~.wwwo~.www `, choices: {}, next: {} },
+    "5": { text: "You found a powerful sword! ", ascii: `              
+      B       
+      BB      
+      BB      
+      BB      
+      BB      
+      BB      
+      BB      
+      BB      
+      BB      
+      BB      
+      BB      
+      BB      
+  CGCGCGCGCG  
+      HH      
+      HH      
+      HH      
+      HH      
+     PPPP     
+     PPPP     
+      PP    `, choices: {}, next: {} },
+    "6": { text: "A monster was waiting for you... ", ascii: `                           
+          ┌┐   ┌┐          
+     ▲    ││   ││     ▲    
+     │    {}───{}     │    
+     │   (=======)    │    
+     │  ( 0 * * 0 )   │    
+     │   ( ▼▲▼▲▼ )    │    
+     @──┌┬───────┬┐───@    
+     └───(       )────┘    
+     │   (==[=]==)    │    
+     │   (       )    │    
+     │    ───────     │    
+          ││   ││          
+          ││   ││          
+          ││   ││          
+         ┌──┐ ┌──┐         
+         └──┘ └──┘         `, choices: {}, next: {} }
 };
 
 function makeChoice(choice) {
