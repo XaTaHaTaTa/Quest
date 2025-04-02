@@ -1,83 +1,108 @@
-
+/* Основные стили страницы */
 body {
     margin: 0;
     font-family: monospace;
-    background: black;
-    color: green;
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-
+/* Контейнер игры */
 #game-container {
     position: relative;
-    border: 2px solid currentColor;
     max-width: 600px;
     margin: 100px auto;
     padding: 20px;
     text-align: center;
+    border: 2px solid;
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
 }
 
-
+/* ASCII-art */
 #ascii-art {
     font-size: 16px;
     white-space: pre;
 }
 
-
+/* Текст */
 #text {
     font-size: 18px;
     margin-top: 20px;
 }
 
-
+/* Кнопки выбора */
 #choices button {
     display: block;
     margin: 10px auto;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: green;
-    color: white;
     border: none;
     border-radius: 5px;
     font-family: 'Courier New', Courier, monospace;
     letter-spacing: 2px;
     text-transform: uppercase;
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-
+/* Кнопка смены темы */
 #theme-toggle {
     position: fixed;
     top: 20px;
     right: 20px;
     padding: 10px 20px;
-    background: green;
-    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-family: 'Courier New', Courier, monospace;
     z-index: 1000;
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
 
+/* === Темы === */
 
+/* Зеленая тема */
 .theme-green {
     background-color: black;
     color: green;
 }
 
+.theme-green #game-container {
+    background-color: rgba(0, 0, 0, 0.85);
+    border-color: green;
+}
+
+.theme-green button {
+    background-color: green;
+    color: white;
+}
+
+/* Оранжевая тема */
 .theme-orange {
     background-color: #1a1a1a;
     color: orange;
 }
 
+.theme-orange #game-container {
+    background-color: rgba(26, 26, 26, 0.9);
+    border-color: orange;
+}
+
+.theme-orange button {
+    background-color: orange;
+    color: black;
+}
+
+/* Синяя тема */
 .theme-blue {
-    background-color: white;
+    background-color: #f0f0f0;
     color: navy;
 }
 
+.theme-blue #game-container {
+    background-color: white;
+    border-color: navy;
+}
 
-#game-container {
-    border-color: currentColor;
-    background-color: rgba(0, 0, 0, 0.8);
+.theme-blue button {
+    background-color: navy;
+    color: white;
 }
