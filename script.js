@@ -48,6 +48,8 @@ function makeChoice(choice) {
 
     const choicesDiv = document.getElementById("choices");
     choicesDiv.innerHTML = "";
+document.getElementById("timestamp").innerText =
+  "Last action: " + new Date().toLocaleString();
 
     if (Object.keys(scene.choices).length > 0) {
         for (const key in scene.choices) {
