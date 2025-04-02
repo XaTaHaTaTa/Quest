@@ -83,7 +83,7 @@ function loadGame() {
 document.addEventListener("DOMContentLoaded", () => {
     loadGame();
 
-    const container = document.getElementById("game-container");
+    const container = document.body; 
     const themeBtn = document.getElementById("theme-toggle");
 
     const themes = ["theme-green", "theme-orange", "theme-blue"];
