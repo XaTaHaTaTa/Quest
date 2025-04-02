@@ -1,28 +1,34 @@
+
 body {
     margin: 0;
     font-family: monospace;
     background: black;
     color: green;
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
+
 
 #game-container {
     position: relative;
-    border: 2px solid green;
+    border: 2px solid currentColor;
     max-width: 600px;
     margin: 100px auto;
     padding: 20px;
     text-align: center;
 }
 
+
 #ascii-art {
     font-size: 16px;
     white-space: pre;
 }
 
+
 #text {
     font-size: 18px;
     margin-top: 20px;
 }
+
 
 #choices button {
     display: block;
@@ -39,41 +45,39 @@ body {
     text-transform: uppercase;
 }
 
+
 #theme-toggle {
     position: fixed;
     top: 20px;
     right: 20px;
-    padding: 10px;
+    padding: 10px 20px;
     background: green;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-family: 'Courier New', Courier, monospace;
+    z-index: 1000;
 }
+
 
 .theme-green {
     background-color: black;
     color: green;
-    border-color: green;
 }
 
 .theme-orange {
     background-color: #1a1a1a;
     color: orange;
-    border-color: orange;
 }
 
 .theme-blue {
     background-color: white;
     color: navy;
-    border-color: navy;
 }
 
-#game-container.theme-green,
-#game-container.theme-orange,
-#game-container.theme-blue {
-    background-color: inherit;
-    color: inherit;
-    border-color: inherit;
+
+#game-container {
+    border-color: currentColor;
+    background-color: rgba(0, 0, 0, 0.8);
 }
