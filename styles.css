@@ -5,6 +5,10 @@ body {
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 /* Контейнер игры */
 #game-container {
     position: relative;
@@ -171,4 +175,47 @@ h1, h2 {
   width: 100%;
 }
 
+@media (max-width: 768px) {
+  .column-layout {
+    flex-direction: column;
+  }
+
+  #game-container {
+    margin: 20px;
+    padding: 10px;
+  }
+
+  #ascii-art {
+    font-size: 14px;
+  }
+
+  #text {
+    font-size: 16px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  #theme-toggle,
+  #timestamp {
+    font-size: 12px;
+    top: 10px;
+  }
+
+  #theme-toggle {
+    right: 10px;
+  }
+
+  #timestamp {
+    left: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  #ascii-art {
+    font-size: 12px;
+  }
+}
 
