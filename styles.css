@@ -2,185 +2,80 @@
 body {
     margin: 0;
     font-family: monospace;
-    transition: background-color 0.4s ease, color 0.4s ease;
+    background-color: black;
+    color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-/* Контейнер игры */
+/* Центрирование контейнера */
 #game-container {
-    position: relative;
-    max-width: 2000px;
-    margin: 100px auto;
-    padding: 20px;
     text-align: center;
-    border: 2px solid;
-    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+    max-width: 600px;
+    padding: 20px;
+    border: 2px solid green;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 /* ASCII-art */
 #ascii-art {
-  font-family: monospace;
-  white-space: pre;
-  font-size: 16px;
-  margin: 0;
+    font-size: 16px;
+    white-space: pre;
 }
 
-.ascii-box {
-  overflow-x: auto;
-  max-width: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  padding: 10px;
-  border: 2px dashed currentColor;
-}
-
-/* Текст */
+/* Основной текст */
 #text {
     font-size: 18px;
     margin-top: 20px;
 }
 
-/* Кнопки выбора */
-#choices button {
+/* Кнопки */
+button {
     display: block;
     margin: 10px auto;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    background-color: green;
+    color: white;
     border: none;
     border-radius: 5px;
     font-family: 'Courier New', Courier, monospace;
     letter-spacing: 2px;
     text-transform: uppercase;
-    transition: background-color 0.4s ease, color 0.4s ease;
-}
-
-/* Кнопка смены темы */
-#theme-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: 'Courier New', Courier, monospace;
-    z-index: 1000;
-    transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 /* Темы */
 .theme-green {
     background-color: black;
     color: green;
-}
-.theme-green #game-container {
-    background-color: rgba(0, 0, 0, 0.85);
     border-color: green;
-}
-.theme-green button {
-    background-color: green;
-    color: white;
 }
 
 .theme-orange {
     background-color: #1a1a1a;
     color: orange;
-}
-.theme-orange #game-container {
-    background-color: rgba(26, 26, 26, 0.9);
     border-color: orange;
-}
-.theme-orange button {
-    background-color: orange;
-    color: black;
 }
 
 .theme-blue {
-    background-color: #f0f0f0;
-    color: navy;
-}
-.theme-blue #game-container {
     background-color: white;
+    color: navy;
     border-color: navy;
 }
-.theme-blue button {
-    background-color: navy;
-    color: white;
+
+#game-container.theme-green,
+#game-container.theme-orange,
+#game-container.theme-blue {
+    background-color: inherit;
+    color: inherit;
+    border-color: inherit;
 }
 
-/* Мультиколоночная вёрстка */
-.column-layout {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-}
-.left-column, .right-column {
-    flex: 1;
-    min-width: 0;
-}
-
-/* Заголовки */
-h1, h2 {
-    text-align: center;
-    font-family: 'Courier New', monospace;
-    margin: 10px 0;
-}
-
-/* Дата/время в левом углу */
-#timestamp {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    font-size: 14px;
-    color: currentColor;
-    font-family: monospace;
-    z-index: 1000;
-}
-
-/* Адаптивность */
-@media (max-width: 768px) {
-  .column-layout {
-    flex-direction: column;
-  }
-
-  #ascii-art {
-    font-size: 12px;
-  }
-
-  #text {
-    font-size: 16px;
-  }
-
-  button {
-    font-size: 14px;
-    padding: 8px 16px;
-  }
-
-  #theme-toggle,
-  #timestamp {
-    font-size: 12px;
-    top: 10px;
-  }
-
-  #theme-toggle {
-    right: 10px;
-  }
-
-  #timestamp {
-    left: 10px;
-  }
-
-  #game-container {
-    margin: 20px;
-    padding: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  #ascii-art {
-    font-size: 12px;
-  }
+/* Hover эффект */
+button:hover {
+    background-color: darkgreen;
 }
