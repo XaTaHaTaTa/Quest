@@ -24,8 +24,9 @@ body {
 #ascii-art {
   font-family: monospace;
   white-space: pre;
-  overflow-x: auto;
   font-size: 14px;
+  overflow-x: auto;
+  margin: 0;
 }
 
 /* Текст */
@@ -157,13 +158,11 @@ h1, h2 {
 
 /* ASCII-art контейнер */
 .ascii-box {
-  border: 2px dashed currentColor;
-  padding: 20px;
+  overflow-x: auto;
+  max-width: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  width: 100%;
-  min-height: 500px;
-  height: auto;
-  box-sizing: border-box;
+  padding: 10px;
+  border: 2px dashed currentColor;
 }
 
 
