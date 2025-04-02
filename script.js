@@ -203,7 +203,7 @@ function loadGame() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    loadGame(); // <- запускает игру
+    loadGame(); // <<< ВАЖНО! Без этого сцена не запускается
 
     const container = document.getElementById("game-container");
     const themeBtn = document.getElementById("theme-toggle");
@@ -217,5 +217,6 @@ document.addEventListener("DOMContentLoaded", () => {
         container.classList.add(themes[currentThemeIndex]);
     });
 });
+
 
 });
