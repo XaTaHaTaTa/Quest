@@ -138,3 +138,29 @@ h1, h2 {
     z-index: 1000;
 }
 
+.column-layout {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.left-column, .right-column {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ASCII-art контейнер */
+.ascii-box {
+  border: 2px dashed currentColor;
+  padding: 10px;
+  background-color: rgba(0,0,0,0.2);
+  max-height: 500px;
+  overflow: auto;
+}
+
+#ascii-art {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.2;
+  white-space: pre;
+}
