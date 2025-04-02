@@ -127,4 +127,14 @@ h1, h2 {
     font-family: 'Courier New', monospace;
     margin: 10px 0;
 }
+/* Дата/время в левом углу */
+#timestamp {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 14px;
+    color: currentColor;
+    font-family: monospace;
+    z-index: 1000;
+}
 
