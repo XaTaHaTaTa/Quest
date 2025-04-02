@@ -22,17 +22,79 @@ const scenes = {
     },
     "1": {
         text: "You entered a dark forest. There's a path ahead and an old bridge. Where do you go?",
-        ascii: `Dark forest ASCII`,
+        ascii: `L L               
+       LLLLLLL  L LL       
+         LLALL LLLLALL     
+     LLLL LLL LLLL LL      
+    LLALLL LLLLLL          
+     L LLLLLLLLL           
+          LLALLL LL    L   
+    L LL LLLLLLLLLLLLLLLL  
+    LLALLLLLLLLALLLLLALL   
+   LLLLL   LLLLLLL  LLL    
+          LLLLLLLLL        
+   LL LL LLLLL│LLL  LLL    
+  LLLLLLLLLL││TLLLLLLLLLL  
+   L LALLLLLL│││LLLLALLLL  
+      LL LLT│││LLL LL L    
+         LL│││T│LL         
+           T││││           
+           ││││T           
+           │T│││TT         
+         TTT  TT TTT       
+        TT   TT            
+              T T          `,
         choices: { 1: "Follow the path that goes deeper into the woods", 2: "Cross the old bridge" },
         next: { 1: "3", 2: "4" }
     },
     "2": {
         text: "You see a giant tower. Two ways: climb into a window or go around.",
-        ascii: `Tower ASCII`,
+        ascii: `
+            RRRRRrR            
+           RrRRRRRRR           
+          RRrRrRRrRRR          
+         RrrRRRRrrRrRR         
+        RRRrRRRRRRrRRrR        
+       RRrRRRrRRRRRRRRRR       
+      RRrRRRRrrRRRRRRrRRR      
+     RRrRrRRRRrRRRRRrrRrRR     
+     ┌─────────┬─────────┐     
+     │    VVVVVV  VV     │     
+     │ ┼─ VVV  VVVV  ─┴  │     
+     │ ├    V    VVVV    │     
+     └┐            VVV   │     
+      │     WWWWWWW  VV ┌┘     
+      │    WW  @  WW  V │      
+      │     [ ─▼─ ]   V │      
+      │  V  [  ▲  ]  VV │      
+     ┌┘ VV  wwwwwww  V  │      
+     │ VV            V  │      
+     │ VVVVV      VVVV  │      
+     │    VVVV    VVV   └┐     
+     └┤VVV   VVVVVVV  ─┤ │     
+      │VVVVVVVVVVV   VV  │     
+      │ VVVVVV VVV V  V┘┌┘     
+     ┌┘     VVVVVV VVVV │      
+     │ ┬┴─       VVV    │      
+     │        VVVV VV   │      
+      └──────────────────┘      `,
         choices: { 1: "Go around the tower", 2: "Climb into the window" },
         next: { 1: "5", 2: "6" }
     },
-    "3": { text: "You found a chest full of gold!", ascii: `GOLD ASCII`, choices: {}, next: {} },
+    "3": { text: "You found a chest full of gold!", ascii: `
+         $$$$$$$    
+       $$$$          
+      $$             
+      $              
+     $$              
+  $$$$$$$$$$$$$$$$   
+     $               
+  $$$$$$$$$$$$$$$$   
+     $$              
+      $              
+      $$             
+       $$$$          
+          $$$$$$$ `, choices: {}, next: {} },
     "4": { text: "The bridge collapsed, and you fell into the river... ", ascii: `RIVER ASCII`, choices: {}, next: {} },
     "5": { text: "You found a powerful sword! ⚔", ascii: `SWORD ASCII`, choices: {}, next: {} },
     "6": { text: "A monster was waiting for you... ", ascii: `MONSTER ASCII`, choices: {}, next: {} }
