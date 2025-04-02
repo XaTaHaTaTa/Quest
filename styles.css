@@ -106,3 +106,17 @@ body {
     background-color: navy;
     color: white;
 }
+
+
+/* Мультиколоночная вёрстка */
+.column-layout {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.left-column,
+.right-column {
+    flex: 1;
+    min-width: 0;
+}
