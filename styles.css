@@ -6,6 +6,7 @@ body {
 }
 
 #game-container {
+    position: relative;
     border: 2px solid green;
     max-width: 600px;
     margin: 100px auto;
@@ -13,8 +14,33 @@ body {
     text-align: center;
 }
 
+#ascii-art {
+    font-size: 16px;
+    white-space: pre;
+}
+
+#text {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+#choices button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
 #theme-toggle {
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 20px;
     padding: 10px;
@@ -23,6 +49,7 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .theme-green {
