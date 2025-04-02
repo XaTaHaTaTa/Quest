@@ -22,8 +22,10 @@ body {
 
 /* ASCII-art */
 #ascii-art {
-    font-size: 16px;
-    white-space: pre;
+  font-family: monospace;
+  white-space: pre;
+  overflow-x: auto;
+  font-size: 14px;
 }
 
 /* Текст */
